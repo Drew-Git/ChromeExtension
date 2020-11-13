@@ -1,0 +1,22 @@
+{
+    "author": "drew_vvv",
+    "manifest_version": 2,
+    "version": "0.0.1",
+    "name": "ToolLinks",
+    "short_name": "__MSG_extension_sname__",
+    "description": "Link shortcuts you added",
+
+    "permissions": [
+        "tabs", "activeTab", "http://*/*", "https://*/*"
+    ],
+
+    "browser_action": {
+        "default_icon": "/src/assets/images/direction.png",
+        "default_popup": "/src/pages/views/LinkPopup.html"
+    },
+
+    "icons": {
+        "128": "/src/assets/images/direction.png"
+    }
+
+}

@@ -1,0 +1,41 @@
+https://developer.chrome.com/extensions/getstarted
+
+
+{
+    "author": "drew_vvv",
+    "manifest_version": 2,
+    "version": "0.0.1",
+    "default_locale": "ko",
+    "name": "ToolLinks",
+    "short_name": "__MSG_extension_sname__",
+    "description": "Link shortcuts you added",
+    
+    "browser_action": {
+        "default_icon": "symbol_color.png",
+        "default_popup": "popup.html"
+    },
+
+    "icons": {
+        "128": "symbol_color.png"
+    },
+    
+    "options_ui": {
+        "chrome_style": true,
+        "page": "options.html"
+    },
+
+    "permissions": [
+        "activeTab", "http://*/*", "https://*/*"
+    ],
+
+    "content_scripts": [{
+        "matches": ["file://home.html"],
+        "js": ["scripts.js"],
+        "css": ["css.css"]
+    }],
+
+    "background": {
+        "scripts": ["background.js"]
+    }
+
+}
